@@ -1,0 +1,36 @@
+{
+  "rule_set": {
+    "rule_set_id": "UK_TAX_2026",
+    "rule_set_name": "Illustrative UK employee tax-code rules",
+    "version": 1,
+    "status": "PUBLISHED",
+    "effective_from": "2026-04-06",
+    "effective_to": null
+  },
+  "parameters": {
+    "personal_allowance": {
+      "value": "12570",
+      "data_type": "DECIMAL"
+    }
+  },
+  "filters": [
+    {
+      "filter_id": "F_UK_RESIDENT",
+      "logical_operator": "AND",
+      "conditions": [
+        {
+          "source_type": "COLUMN",
+          "source_name": "country",
+          "operator": "EQUALS",
+          "value": "UK"
+        },
+        {
+          "source_type": "COLUMN",
+          "source_name": "residency_status",
+          "operator": "EQUALS",
+          "value": "Resident"
+        }
+      ]
+    }
+  ]
+}

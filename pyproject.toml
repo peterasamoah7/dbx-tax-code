@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "configurable-tax-rule-engine"
+version = "1.0.0"
+description = "Configurable BA-managed tax rule engine for Databricks and PySpark"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.7,<3"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
